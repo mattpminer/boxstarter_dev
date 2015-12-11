@@ -1,0 +1,9 @@
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+
+cinst fiddler4
+cinst git-credential-winstore
+cinst sublimetext3
+cinst poshgit
+cinst awscli
+cinst awstools.powershell
+
