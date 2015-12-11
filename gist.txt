@@ -6,4 +6,4 @@ cinst sublimetext3
 cinst poshgit
 cinst awscli
 cinst awstools.powershell
-
+cinst google-chrome-x64
