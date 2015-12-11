@@ -1,4 +1,5 @@
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Set-ExecutionPolicy RemoteSigned
 
 cinst fiddler4
 cinst git-credential-winstore
@@ -10,6 +11,7 @@ cinst google-chrome-x64
 cinst vagrant
 cinst virtualbox
 cinst packer
+cinst packer-windows-plugins
 
 $UNPIN = (
 	("C:\Program Files\Internet Explorer\","iexplore.exe"),
@@ -29,7 +31,7 @@ foreach ($item in $UNPIN)
 $PIN = (
 	("C:\Program Files (x86)\Google\Chrome\Application\","chrome.exe"),
 	("C:\Program Files (x86)\Atlassian\SourceTree\","SourceTree.exe"),
-    ("%SystemRoot%\system32\WindowsPowerShell\v1.0\","powershell.exe"),
+    ("C:\windows\system32\WindowsPowerShell\v1.0\","powershell.exe"),
     ("C:\Program Files\Sublime Text 3","sublime_text.exe"),
 	$null)
 foreach ($item in $PIN)
