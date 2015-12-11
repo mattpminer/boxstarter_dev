@@ -11,6 +11,7 @@ cinst google-chrome-x64
 $UNPIN = (
 	("C:\Program Files\Internet Explorer\","iexplore.exe"),
 	$null)
+
 foreach ($item in $UNPIN)
 {
     if ($item){
@@ -21,3 +22,19 @@ foreach ($item in $UNPIN)
         if ($verb) {$verb.DoIt()}
     }
 }
+
+$PIN = (
+	("C:\Program Files (x86)\Google\Chrome\Application\","chrome.exe"),
+	("C:\Program Files (x86)\Atlassian\SourceTree\","SourceTree.exe"),
+	$null)
+foreach ($item in $PIN)
+{
+    if ($item){
+        $shell = new-object -com "Shell.Application"  
+        $folder = $shell.Namespace($item[0])    
+        $item = $folder.Parsename($item[1])
+        $verb = $item.Verbs() | ? {$_.Name -eq 'Pin to Tas&kbar'}
+        if ($verb) {$verb.DoIt()}
+    }
+}
+
