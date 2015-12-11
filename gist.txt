@@ -26,6 +26,7 @@ foreach ($item in $UNPIN)
 $PIN = (
 	("C:\Program Files (x86)\Google\Chrome\Application\","chrome.exe"),
 	("C:\Program Files (x86)\Atlassian\SourceTree\","SourceTree.exe"),
+    ("C:\Program Files\Sublime Text 3","sublime_text.exe")
 	$null)
 foreach ($item in $PIN)
 {
