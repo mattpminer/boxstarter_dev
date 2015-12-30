@@ -7,6 +7,8 @@ cinst poshgit
 cinst awscli
 cinst awstools.powershell
 cinst google-chrome-x64
+cinst python2
+cinst nodejs
 
 $UNPIN = (
 	("C:\Program Files\Internet Explorer\","iexplore.exe"),
